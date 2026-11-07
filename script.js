@@ -1,71 +1,71 @@
-const duraciones = [95, 120, 45, 180, 62, 150, 88, 210, 73, 140]
-// console.log("Duraciones de películas en minutos:", duraciones)
-// console.log("Elementos totales en el array duraciones:", duraciones.length)
-// console.log("Primer elemento:", duraciones[0])
+const duraciones = [95, 120, 45, 180, 62, 150, 88, 210, 73, 140];
+console.log("Duraciones de películas en minutos:", duraciones);
+console.log("Elementos totales en el array duraciones:", duraciones.length);
+console.log("Primer elemento:", duraciones[0]);
 
-// for (let i = 0; i < duraciones.length; i++) {
-//   console.log(`Duración de la película ${i + 1}: ${duraciones[i]}`)
-//   // console.log(duraciones[i] + 1)
-// }
+for (let i = 0; i < duraciones.length; i++) {
+  console.log(`Duración de la película ${i + 1}: ${duraciones[i]}`);
+  console.log(duraciones[i] + 1);
+}
 
-const duracionPelicula = 119 // minutos
+const duracionPelicula = 119; // minutos
 
-// if (duracionPelicula < 90) {
-//   console.log("Película corta")
-// } else if (duracionPelicula <= 120) {
-//   console.log("Película estándar")
-// } else {
-//   console.log("Película larga")
-// }
+if (duracionPelicula < 90) {
+  console.log("Película corta");
+} else if (duracionPelicula <= 120) {
+  console.log("Película estándar");
+} else {
+  console.log("Película larga");
+}
 
-// Fizzbuzz
+// Fizzbuzz;
 
 // for (let i = 1; i <= 100; i++) {
 //   if (i % 3 === 0 && i % 5 === 0) {
-//     console.log("FizzBuzz")
+//     console.log("FizzBuzz");
 //   } else if (i % 3 === 0) {
-//     console.log("Fizz")
+//     console.log("Fizz");
 //   } else if (i % 5 === 0) {
-//     console.log("Buzz")
+//     console.log("Buzz");
 //   } else {
-//     console.log(i)
+//     console.log(i);
 //   }
 // }
 
-let cortas = 0
-let normales = 0
-let largas = 0
+let cortas = 0;
+let normales = 0;
+let largas = 0;
 
-// for (let i = 0; i < duraciones.length; i++) {
-//   if (duraciones[i] < 90) {
-//     cortas++
-//     console.log(`${duraciones[i]} es una peli corta`)
-//   } else if (duraciones[i] <= 120) {
-//     normales++
-//     console.log(`${duraciones[i]} es una peli normal`)
-//   } else {
-//     largas++
-//     console.log(`${duraciones[i]} es una peli larga`)
-//   }
-// }
+for (let i = 0; i < duraciones.length; i++) {
+  if (duraciones[i] < 90) {
+    cortas++;
+    console.log(`${duraciones[i]} es una peli corta`);
+  } else if (duraciones[i] <= 120) {
+    normales++;
+    console.log(`${duraciones[i]} es una peli normal`);
+  } else {
+    largas++;
+    console.log(`${duraciones[i]} es una peli larga`);
+  }
+}
 
-// console.log(`Cortas: ${cortas} - Normales: ${normales} - Largas: ${largas}`)
+console.log(`Cortas: ${cortas} - Normales: ${normales} - Largas: ${largas}`);
 
 const pelicula = {
   titulo: "Origen",
   fecha: 2010,
   rating: 8.8,
   disponible: true,
-}
+};
 
-// console.log(pelicula)
-// console.log(pelicula.titulo)
-// console.log(pelicula["fecha"])
+console.log(pelicula);
+console.log(pelicula.titulo);
+console.log(pelicula["fecha"]);
 
-// pelicula.rating = 9.0
+pelicula.rating = 9.0;
 
-// pelicula.director = "Christopher Nolan"
-// console.log(pelicula)
+pelicula.director = "Christopher Nolan";
+console.log(pelicula);
 
 const peliculas = [
   {
@@ -110,71 +110,71 @@ const peliculas = [
     rating: 7.1,
     disponible: true,
   },
-]
-
-// for (let i = 0; i < peliculas.length; i++) {
-//   const pelicula = peliculas[i]
-//   if (pelicula.disponible) {
-//     console.log(
-//       `[${pelicula.fecha}] ${pelicula.titulo} - Género: ${pelicula.genero} - Rating: ${pelicula.rating}`,
-//     )
-//   } else {
-//     console.log(`[${pelicula.fecha}]  ${pelicula.titulo} - NO DISPONIBLE`)
-//   }
-// }
+];
 
 for (let i = 0; i < peliculas.length; i++) {
-  const pelicula = peliculas[i]
+  const pelicula = peliculas[i];
+  if (pelicula.disponible) {
+    console.log(
+      `[${pelicula.fecha}] ${pelicula.titulo} - Género: ${pelicula.genero} - Rating: ${pelicula.rating}`,
+    );
+  } else {
+    console.log(`[${pelicula.fecha}]  ${pelicula.titulo} - NO DISPONIBLE`);
+  }
+}
+
+for (let i = 0; i < peliculas.length; i++) {
+  const pelicula = peliculas[i];
 
   if (pelicula.disponible && pelicula.rating >= 8.0) {
-    console.log(`Recomendada: ${pelicula.titulo} (${pelicula.rating})`)
+    console.log(`Recomendada: ${pelicula.titulo} (${pelicula.rating})`);
   }
 
   if (pelicula.genero === "Terror" || pelicula.genero === "Ciencia Ficción") {
-    console.log(`Género TOP: ${pelicula.titulo} - ${pelicula.genero}`)
+    console.log(`Género TOP: ${pelicula.titulo} - ${pelicula.genero}`);
   }
 
   // funciona igual que pelicula.disponible === false
   if (!pelicula.disponible) {
-    console.log(`Próximamente: ${pelicula.titulo}`)
+    console.log(`Próximamente: ${pelicula.titulo}`);
   }
 }
 
 function sumarPrecios(precio1, precio2) {
-  const resultado = precio1 + precio2
-  return resultado
+  const resultado = precio1 + precio2;
+  return resultado;
 }
 
-console.log(sumarPrecios(10, 24))
+console.log(sumarPrecios(10, 24));
 
 function restarPrecios(precio1, precio2) {
-  const resultado = precio1 - precio2
-  return resultado
+  const resultado = precio1 - precio2;
+  return resultado;
 }
 
-console.log(restarPrecios(20, 10))
+console.log(restarPrecios(20, 10));
 
 function formatearTitulo(titulo) {
-  const tituloMayus = titulo.toUpperCase()
-  const tituloFormateado = `*** ${tituloMayus} ***`
-  return tituloFormateado
+  const tituloMayus = titulo.toUpperCase();
+  const tituloFormateado = `*** ${tituloMayus} ***`;
+  return tituloFormateado;
 }
 
-console.log(formatearTitulo("Reyes"))
+console.log(formatearTitulo("Reyes"));
 
 for (let i = 0; i < peliculas.length; i++) {
-  console.log(formatearTitulo(peliculas[i].titulo))
+  console.log(formatearTitulo(peliculas[i].titulo));
 }
 
 function obtenerPelisDisponibles(listaPelis) {
-  const disponibles = []
+  const disponibles = [];
 
   for (let i = 0; i < listaPelis.length; i++) {
     if (listaPelis[i].disponible) {
-      disponibles.push(listaPelis[i].titulo)
+      disponibles.push(listaPelis[i].titulo);
     }
   }
-  return disponibles
+  return disponibles;
 }
 
 const peliculas2 = [
@@ -248,7 +248,7 @@ const peliculas2 = [
     rating: 8.0,
     disponible: false,
   },
-]
+];
 
-console.log(obtenerPelisDisponibles(peliculas))
-console.log(obtenerPelisDisponibles(peliculas2))
+console.log(obtenerPelisDisponibles(peliculas));
+console.log(obtenerPelisDisponibles(peliculas2));
